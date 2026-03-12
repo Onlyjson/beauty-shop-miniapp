@@ -1,0 +1,94 @@
+美容院小程序项目结构
+====================
+
+beauty-shop-miniapp/
+├── cloudfunctions/           # 云函数
+│   ├── login/               # 用户登录
+│   ├── booking/             # 预约相关
+│   ├── payment/             # 支付相关
+│   └── coupon/              # 优惠券相关
+│
+├── miniprogram/             # 小程序前端
+│   ├── pages/               # 页面
+│   │   ├── index/           # 首页
+│   │   ├── booking/         # 预约页
+│   │   ├── member/          # 会员中心
+│   │   ├── activity/        # 营销活动
+│   │   ├── order/           # 订单页
+│   │   ├── user/            # 用户中心
+│   │   └── admin/           # 员工端
+│   │
+│   ├── components/          # 组件
+│   │   ├── project-card/    # 项目卡片
+│   │   ├── coupon-card/     # 优惠券卡片
+│   │   ├── booking-form/    # 预约表单
+│   │   └── member-level/    # 会员等级
+│   │
+│   ├── utils/               # 工具函数
+│   │   ├── request.js       # 网络请求
+│   │   ├── auth.js          # 认证
+│   │   └── format.js        # 格式化工具
+│   │
+│   ├── api/                 # API 接口
+│   │   ├── user.js          # 用户接口
+│   │   ├── project.js       # 项目接口
+│   │   ├── booking.js       # 预约接口
+│   │   └── member.js        # 会员接口
+│   │
+│   ├── store/               # 状态管理
+│   │   └── app.js           # 全局状态
+│   │
+│   ├── app.js               # 小程序入口
+│   ├── app.json             # 小程序配置
+│   ├── app.wxss             # 全局样式
+│   └── project.config.json  # 项目配置
+│
+├── server/                  # 后端服务
+│   ├── src/
+│   │   ├── config/          # 配置文件
+│   │   │   └── database.js
+│   │   ├── models/          # 数据模型
+│   │   │   ├── User.js
+│   │   │   ├── Project.js
+│   │   │   ├── Booking.js
+│   │   │   ├── Order.js
+│   │   │   └── Coupon.js
+│   │   ├── controllers/     # 控制器
+│   │   │   ├── user.js
+│   │   │   ├── project.js
+│   │   │   ├── booking.js
+│   │   │   └── member.js
+│   │   ├── routes/          # 路由
+│   │   │   ├── index.js
+│   │   │   └── api.js
+│   │   ├── middleware/      # 中间件
+│   │   │   ├── auth.js      # 认证
+│   │   │   └── validate.js  # 验证
+│   │   ├── services/        # 业务逻辑
+│   │   │   ├── booking.js
+│   │   │   ├── payment.js
+│   │   │   └── coupon.js
+│   │   └── utils/           # 工具函数
+│   │
+│   ├── package.json
+│   └── server.js
+│
+├── database/                # 数据库
+│   ├── migrations/          # 迁移脚本
+│   │   └── 001_init.sql
+│   └── seeds/               # 种子数据
+│       └── initial_data.sql
+│
+├── docs/                    # 文档
+│   ├── API.md               # API 文档
+│   ├── DEPLOY.md            # 部署文档
+│   └── USER_GUIDE.md        # 用户指南
+│
+├── tests/                   # 测试
+│   ├── unit/                # 单元测试
+│   └── integration/         # 集成测试
+│
+├── .env.example             # 环境变量示例
+├── .gitignore
+├── README.md
+└── package.json
